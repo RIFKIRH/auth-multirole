@@ -1,22 +1,21 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Sidebar from '../components/Sidebar'
+import React from "react";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
-const layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
-    <div>
-      <React.Fragment>
-        <Navbar/>
-        <div className="columns mt-6" style={{minHeight: "100vh"}}>
-            <div className="column is-2">
-                <Sidebar/></div>
-                <div className="column has-background-light">
-                    <main>{children}</main>
-                </div>
+    <React.Fragment>
+      <Navbar />
+      <div className="columns mt-6" style={{ minHeight: "100vh" }}>
+        <div className="column is-2">
+          <Sidebar />
         </div>
-      </React.Fragment>
-    </div>
-  )
-}
+        <div className="column has-background-light">
+          <main>{children}</main>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-export default layout
+export default Layout;
